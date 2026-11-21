@@ -1,0 +1,42 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--ink:#08080D;--panel:#11111A;--crimson:#d6153f;--rose:#ff4d8d;--violet:#8b5cf6;--blue:#3b82f6}
+html{background:var(--ink);color:#fff;scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;margin:0;-webkit-font-smoothing:antialiased;background:
+  radial-gradient(1100px 520px at 12% -8%,rgba(139,92,246,.16),transparent 60%),
+  radial-gradient(900px 480px at 100% 0%,rgba(214,21,63,.14),transparent 60%),
+  radial-gradient(900px 600px at 50% 120%,rgba(59,130,246,.10),transparent 60%),var(--ink);background-attachment:fixed}
+h1,h2,h3{letter-spacing:-.015em}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+
+/* Tugmalar */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,border-color .25s;min-height:44px;position:relative}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn-p{background:linear-gradient(135deg,#d6153f,#ff4d8d 55%,#8b5cf6);background-size:160% 100%;background-position:0 0;color:#fff;box-shadow:0 8px 28px -10px rgba(214,21,63,.7)}
+.btn-p:hover{background-position:100% 0;box-shadow:0 12px 34px -10px rgba(255,77,141,.85)}
+.btn-g{border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px)}.btn-g:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4)}
+.btn-ig{background:linear-gradient(135deg,#7c3aed,#d6153f 60%,#f97316);color:#fff;box-shadow:0 8px 26px -10px rgba(214,21,63,.7)}
+.btn-ig:hover{box-shadow:0 12px 34px -8px rgba(214,21,63,.85)}
+.btn-tg{background:linear-gradient(135deg,#1d4ed8,#229ed9);color:#fff;box-shadow:0 8px 26px -10px rgba(34,158,217,.7)}
+.btn-tg:hover{box-shadow:0 12px 34px -8px rgba(34,158,217,.85)}
+.icon-btn{width:40px;height:40px;border-radius:999px;display:inline-grid;place-items:center;border:1px solid rgba(255,255,255,.18);color:#fff;transition:transform .25s,background .25s,border-color .25s,box-shadow .25s}
+.icon-btn:hover{transform:translateY(-2px)}
+.icon-btn.ig:hover{background:linear-gradient(135deg,#7c3aed,#d6153f 60%,#f97316);border-color:transparent;box-shadow:0 8px 22px -8px rgba(214,21,63,.9)}
+.icon-btn.tg:hover{background:linear-gradient(135deg,#1d4ed8,#229ed9);border-color:transparent;box-shadow:0 8px 22px -8px rgba(34,158,217,.9)}
+
+.input{width:100%;background:var(--panel);border:1px solid rgba(255,255,255,.14);border-radius:.75rem;padding:.8rem 1rem;color:#fff}
+.input[aria-invalid=true]{border-color:#ff4d6d}
+
+/* Placeholder ([Ismingiz], [Uni ismi]) — dizaynning bir qismi */
+.ph-chip{display:inline-block;padding:.02em .5em .08em;margin:0 .08em;border-radius:999px;font-style:normal;font-weight:700;line-height:1.35;white-space:nowrap;
+  color:inherit;background:linear-gradient(135deg,rgba(139,92,246,.30),rgba(214,21,63,.30));border:1px dashed currentColor;
+  box-shadow:0 0 18px -4px rgba(255,77,141,.55);animation:ph-glow 3.2s ease-in-out infinite}
+@keyframes ph-glow{0%,100%{box-shadow:0 0 12px -4px rgba(255,77,141,.35)}50%{box-shadow:0 0 22px -2px rgba(139,92,246,.7)}}
+
+/* Kartalar */
+.tpl-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s;will-change:transform}
+.tpl-card:hover{transform:translateY(-6px);border-color:rgba(255,77,141,.5);box-shadow:0 24px 60px -24px rgba(139,92,246,.6),0 0 0 1px rgba(255,77,141,.18)}
+.tpl-card .tpl-glyph{transition:transform .5s cubic-bezier(.2,.8,.2,1)}.tpl-card:hover .tpl-glyph{transform:scale(1.18) rotate(-4deg)}
+.gradient-text{background:linear-gradient(120deg,#fff 10%,#ffb3cc 45%,#b9a1ff 75%,#8fb8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:rgba(17,17,26,.66);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.09)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

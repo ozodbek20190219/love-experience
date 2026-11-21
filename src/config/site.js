@@ -1,7 +1,7 @@
 // Yagona sozlama fayli: aloqa havolalari va shablonlar.
 // Aloqa havolalari shu yerda qat'iy yozilgan (env'dan olinmaydi) — eski/boshqa username qolib ketmasligi uchun.
 export const CONTACTS = {
-  instagram: { user: 'anora.010', url: 'https://ig.me/m/anora.010', profile: 'https://instagram.com/anora.010' },
+  instagram: { user: '_anora.010_', url: 'https://ig.me/m/_anora.010_', profile: 'https://instagram.com/_anora.010_' },
   telegram: { user: 'anora_dev', url: 'https://t.me/anora_dev' },
 };
 

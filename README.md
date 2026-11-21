@@ -2,13 +2,13 @@
 
 Romantik 3D saytlar xizmatining **reklama va demo platformasi** (React + Vite + Tailwind + Three.js, backend — Express/Node). Interfeys tili — o'zbek (lotin).
 
-Siz sayt havolasini Instagram bio'ga qo'yasiz → mijoz 5 ta 3D shablonni ko'radi → yoqsa **Instagram** (`@anora.010`) yoki **Telegram** (`@anora_dev`) orqali yozadi → siz unga alohida sayt yaratib, havola berasiz → sevgilisi javob berganda javoblar **sizning Telegram botingizga** keladi.
+Siz sayt havolasini Instagram bio'ga qo'yasiz → mijoz 5 ta 3D shablonni ko'radi → yoqsa **Instagram** (`@_anora.010_`) yoki **Telegram** (`@anora_dev`) orqali yozadi → siz unga alohida sayt yaratib, havola berasiz → sevgilisi javob berganda javoblar **sizning Telegram botingizga** keladi.
 
 Supabase, admin panel, mijozlar kabineti, buyurtma formasi va to'lov tizimi **yo'q** — ular kerak emas.
 
 ## Aloqa havolalari
 `src/config/site.js` ichida qat'iy yozilgan (env'dan olinmaydi):
-- Instagram: https://ig.me/m/anora.010
+- Instagram: https://ig.me/m/_anora.010_
 - Telegram: https://t.me/anora_dev
 
 Tugmalar bosh sahifa, sarlavha, footer, "Aloqa", "Shablonlar" sahifalari va demo yakunida bor. Username o'zgarsa, faqat shu faylni tahrirlang (`tests/static.test.js` boshqa username qolmaganini tekshiradi).
@@ -92,7 +92,7 @@ Frontend va backend bitta serverda (masalan Render) ishlasa, `VITE_API_BASE` ni 
 ## Halol holat: nima tekshirilgan, nima yo'q
 **Haqiqatan tekshirilgan (yaratuvchi muhitda):**
 - `npm test` — 25/25 o'tdi: server API, ID generatsiyasi, Telegram xabari mazmuni (ID, shablon, ism, savol, javob, sana/vaqt), takroriy xabar himoyasi (sid, mazmun, bir vaqtdagi so'rovlar, xatodan keyin qayta urinish), rate limit, path traversal, aloqa havolalari, shablon nomlari, placeholderlar, frontendda token yo'qligi.
-- `npm run build` muvaffaqiyatli; `dist/` ichida bot tokeni/Telegram API manzili yo'q, faqat `ig.me/m/anora.010` va `t.me/anora_dev` bor.
+- `npm run build` muvaffaqiyatli; `dist/` ichida bot tokeni/Telegram API manzili yo'q, faqat `ig.me/m/_anora.010_` va `t.me/anora_dev` bor.
 - Haqiqiy server ishga tushirilib: `/api/health`, `new-site` skripti, `/api/sites/<ID>`, `/s/<ID>` va `/demo/...` javoblari tekshirilgan; Telegram sozlanmaganda yuborish 503 qaytargan.
 
 **Tekshirilmagan (o'zingiz sinab ko'ring):**

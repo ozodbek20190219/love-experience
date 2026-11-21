@@ -13,8 +13,8 @@ const srcFiles = walk(join(root, 'src'));
 const read = p => readFileSync(p, 'utf8');
 
 test('Aloqa havolalari aynan so\'ralgan manzillar', () => {
-  assert.equal(CONTACTS.instagram.url, 'https://ig.me/m/anora.010');
-  assert.equal(CONTACTS.instagram.user, 'anora.010');
+  assert.equal(CONTACTS.instagram.url, 'https://ig.me/m/_anora.010_');
+  assert.equal(CONTACTS.instagram.user, '_anora.010_');
   assert.equal(CONTACTS.telegram.url, 'https://t.me/anora_dev');
   assert.equal(CONTACTS.telegram.user, 'anora_dev');
 });
@@ -23,7 +23,7 @@ test('Manba kodida boshqa Instagram/Telegram username yoki havola yo\'q', () => 
   const all = srcFiles.filter(f => /\.(jsx?|html)$/.test(f)).map(read).join('\n') + read(join(root, 'index.html'));
   const ig = [...all.matchAll(/instagram\.com\/([\w.]+)|ig\.me\/m\/([\w.]+)/g)].map(m => m[1] || m[2]);
   const tg = [...all.matchAll(/t\.me\/([\w]+)/g)].map(m => m[1]);
-  assert.ok(ig.length > 0 && ig.every(u => u === 'anora.010'), JSON.stringify(ig));
+  assert.ok(ig.length > 0 && ig.every(u => u === '_anora.010_'), JSON.stringify(ig));
   assert.ok(tg.length > 0 && tg.every(u => u === 'anora_dev'), JSON.stringify(tg));
   assert.equal(/VITE_INSTAGRAM_USER/.test(all), false);
 });

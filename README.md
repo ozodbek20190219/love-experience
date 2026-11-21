@@ -8,7 +8,7 @@ Supabase, admin panel, mijozlar kabineti, buyurtma formasi va to'lov tizimi **yo
 
 ## Aloqa havolalari
 `src/config/site.js` ichida qat'iy yozilgan (env'dan olinmaydi):
-- Instagram: https://ig.me/m/_anora.010_
+- Instagram: https://www.instagram.com/_anora.010_/ (profil sahifasi; `ig.me/m/...` DM havolasi ba'zi qurilmalarda profilni ochmaganligi uchun profil havolasi qo'yildi)
 - Telegram: https://t.me/anora_dev
 
 Tugmalar bosh sahifa, sarlavha, footer, "Aloqa", "Shablonlar" sahifalari va demo yakunida bor. Username o'zgarsa, faqat shu faylni tahrirlang (`tests/static.test.js` boshqa username qolmaganini tekshiradi).
@@ -92,7 +92,7 @@ Frontend va backend bitta serverda (masalan Render) ishlasa, `VITE_API_BASE` ni 
 ## Halol holat: nima tekshirilgan, nima yo'q
 **Haqiqatan tekshirilgan (yaratuvchi muhitda):**
 - `npm test` — 25/25 o'tdi: server API, ID generatsiyasi, Telegram xabari mazmuni (ID, shablon, ism, savol, javob, sana/vaqt), takroriy xabar himoyasi (sid, mazmun, bir vaqtdagi so'rovlar, xatodan keyin qayta urinish), rate limit, path traversal, aloqa havolalari, shablon nomlari, placeholderlar, frontendda token yo'qligi.
-- `npm run build` muvaffaqiyatli; `dist/` ichida bot tokeni/Telegram API manzili yo'q, faqat `ig.me/m/_anora.010_` va `t.me/anora_dev` bor.
+- `npm run build` muvaffaqiyatli; `dist/` ichida bot tokeni/Telegram API manzili yo'q, faqat `instagram.com/_anora.010_` va `t.me/anora_dev` bor.
 - Haqiqiy server ishga tushirilib: `/api/health`, `new-site` skripti, `/api/sites/<ID>`, `/s/<ID>` va `/demo/...` javoblari tekshirilgan; Telegram sozlanmaganda yuborish 503 qaytargan.
 
 **Tekshirilmagan (o'zingiz sinab ko'ring):**

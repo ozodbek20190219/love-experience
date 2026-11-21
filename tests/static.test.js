@@ -12,8 +12,8 @@ const walk = d => readdirSync(d).flatMap(f => { const p = join(d, f); return sta
 const srcFiles = walk(join(root, 'src'));
 const read = p => readFileSync(p, 'utf8');
 
-test('Aloqa havolalari aynan so\'ralgan manzillar', () => {
-  assert.equal(CONTACTS.instagram.url, 'https://ig.me/m/_anora.010_');
+test('Aloqa havolalari aynan kerakli manzillar', () => {
+  assert.equal(CONTACTS.instagram.url, 'https://www.instagram.com/_anora.010_/');
   assert.equal(CONTACTS.instagram.user, '_anora.010_');
   assert.equal(CONTACTS.telegram.url, 'https://t.me/anora_dev');
   assert.equal(CONTACTS.telegram.user, 'anora_dev');
